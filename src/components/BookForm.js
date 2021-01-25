@@ -10,14 +10,14 @@ const BookForm = () => {
         </label>
       </div>
       <div>
-        <label htmlFor="cars">
+        <label htmlFor="booksCategory">
           Choose a category:
           <select name="category" id="category">
-            {bookCategories.map(categ => <option value={categ}>{categ}</option>)}
+            {bookCategories.map(categ => <option key={categ} value={categ}>{categ}</option>)}
           </select>
         </label>
       </div>
-      <button type="submit" />
+      <button type="submit">Submit</button>
     </form>
   );
 };
