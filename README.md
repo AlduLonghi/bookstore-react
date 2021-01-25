@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://my-amazing-bookstore.herokuapp.com/)
 
 
 ## Getting Started
