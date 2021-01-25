@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import App from './containers/App';
 import booksReducer from './reducers/books';
-import { createStore } from 'redux';
 
 const initialState = [
   { id: Math.random(), title: 'Title for book #1', category: 'Horror' },
@@ -18,7 +18,7 @@ const store = createStore(booksReducer, initialState);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,
