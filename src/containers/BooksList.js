@@ -30,7 +30,7 @@ BooksList.defaultProps = {
 
 function mapStateToProps(state) {
   return {
-    books: state.books,
+    books: state,
   };
 }
 
