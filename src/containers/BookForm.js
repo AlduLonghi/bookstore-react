@@ -16,8 +16,6 @@ const BookForm = ({ createBook }) => {
     setBook({ title: '', category: '' });
   };
 
-  const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-
   return (
     <form>
       <div>
