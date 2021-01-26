@@ -1,11 +1,15 @@
 const CHANGE_FILTER = 'CHANGE_FILTER';
 
-const filterReducer = (state, action) => {
-  switch (action.payload) {
-    case ('Action' || 'Biography' || 'History' || 'Horror' || 'Kids' || 'Learning' || 'Sci-Fi'):
-      return {...state, filter: action.payload};
+const initialState = {
+  filter: 'All',
+};
+
+const filterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case CHANGE_FILTER:
+      return { ...state, filter: action.payload };
     default:
-      return state.filter;
+      return state;
   }
 };
 
