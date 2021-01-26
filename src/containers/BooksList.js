@@ -29,8 +29,9 @@ BooksList.defaultProps = {
 };
 
 function mapStateToProps(state) {
+  console.log(state);
   return {
-    books: state,
+    books: state.booksReducer,
   };
 }
 
