@@ -11,7 +11,7 @@ const BooksList = ({ books }) => (
     </tr>
     {books.map(book => (
       <Book
-        key={book.title}
+        key={book.id}
         bookId={book.id}
         bookTitle={book.title}
         bookCategory={book.category}
@@ -29,6 +29,7 @@ BooksList.defaultProps = {
 };
 
 function mapStateToProps(state) {
+  console.log(state);
   return {
     books: state.booksReducer,
   };
