@@ -1,18 +1,16 @@
 const CREATE_BOOK = 'CREATE_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
-const initialState = [];
-
-const booksReducer = (state = initialState, action) => {
+const booksReducer = (state, action) => {
   switch (action.type) {
     case CREATE_BOOK: {
-      const newArr = [...state, action.payload];
+      const newArr = [...state.books, action.payload];
       return newArr;
     }
     case REMOVE_BOOK:
-      return [...state].filter(book => book.id !== action.payload);
+      return [...state.books].filter(book => book.id !== action.payload);
     default:
-      return state;
+      return state.books;
   }
 };
 
