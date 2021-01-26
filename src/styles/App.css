@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+.table-container {
+  width: 35%;
+}
+
+.table-container td {
+  width: 15rem;
+}
+
+.table-container th {
+  width: 15rem;
+}
