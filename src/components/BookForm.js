@@ -4,10 +4,13 @@ class BookForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      bookTitle: '',
-      bookCategory: '',
-    };
+    this.state = {};
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
@@ -17,7 +20,7 @@ class BookForm extends Component {
         <div>
           <label htmlFor="title">
             Title of your book:
-            <input type="text" id="book" name="book" />
+            <input type="text" id="book" name="book" onChange={this.handleChange}/>
           </label>
         </div>
         <div>
