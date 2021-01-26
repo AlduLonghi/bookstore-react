@@ -7,7 +7,12 @@ class BookForm extends Component {
   constructor({ createBook }) {
     super(createBook);
 
-    this.state = {};
+    this.state = {
+      title: '',
+      category: '',
+      id: null,
+    };
+
     this.createBook = createBook;
 
     this.handleChange = this.handleChange.bind(this);
@@ -19,21 +24,24 @@ class BookForm extends Component {
   }
 
   handleSubmit() {
-    this.setState(prevState => {
-      this.createBook({ ...prevState, id: Math.random() });
-      return null;
+    const newBook = { ...this.state, id: Math.random() };
+    this.createBook(newBook);
+
+    this.setState({
+      title: '',
+      category: '',
+      id: null,
     });
   }
 
   render() {
     const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-    console.log(this.state);
     return (
       <form>
         <div>
           <label htmlFor="title">
             Title of your book:
-            <input type="text" id="book" name="bookTitle" onChange={this.handleChange} />
+            <input type="text" id="book" name="title" onChange={this.handleChange} />
           </label>
         </div>
         <div>
