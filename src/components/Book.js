@@ -17,6 +17,7 @@ const Book = props => {
           <button type="button">Edit</button>
         </div>
       </div>
+      <div />
     </div>
   );
 };

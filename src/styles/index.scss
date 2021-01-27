@@ -114,7 +114,7 @@ nav button {
   margin-top: 0.6rem;
 }
 
-.book-main-properties:last-child,
+.book-main-properties p:nth-child(3),
 .book-options button {
   color: $light-blue;
 }
