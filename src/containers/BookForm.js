@@ -17,7 +17,7 @@ const BookForm = ({ createBook }) => {
     if (book.title !== '' && book.category !== 'invalidOption') {
       const newBook = { ...book, id: Math.random() };
       createBook(newBook);
-      setBook({ title: '', category: '' });
+      setBook({ title: '', category: 'invalidOption' });
       setInvalidSubmition(false);
     } else {
       setInvalidSubmition(true);
