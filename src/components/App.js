@@ -1,13 +1,15 @@
-import '../styles/App.css';
+import '../styles/index.scss';
 import BooksList from '../containers/BooksList';
 import BookForm from '../containers/BookForm';
+import Navbar from './Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <Navbar />
       <BooksList />
       <BookForm />
-    </div>
+    </>
   );
 }
 

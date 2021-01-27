@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { changeFilter, removeBook } from '../redux/actions/index';
 import CategoryFilter from '../components/CategoryFilter';
-import '../styles/App.css';
+import '../styles/index.scss';
 
 const BooksList = ({
   books, removeBook, changeFilter, filter,
