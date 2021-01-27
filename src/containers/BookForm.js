@@ -19,6 +19,7 @@ const BookForm = ({ createBook }) => {
       createBook(newBook);
       setBook({ title: '', category: 'invalidOption' });
       setInvalidSubmition(false);
+      document.getElementById('book-form').reset();
     } else {
       setInvalidSubmition(true);
     }
@@ -27,7 +28,7 @@ const BookForm = ({ createBook }) => {
   const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
   return (
-    <form>
+    <form id="book-form">
       <div>
         <label htmlFor="title">
           Title of your book:
