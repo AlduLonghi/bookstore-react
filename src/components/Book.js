@@ -6,12 +6,18 @@ const Book = props => {
   } = props;
 
   return (
-    <tr>
-      <td>{bookId}</td>
-      <td>{bookTitle}</td>
-      <td>{bookCategory}</td>
-      <td><button type="button" onClick={() => onClick(bookId)}>Delete</button></td>
-    </tr>
+    <div className="book-description">
+      <div className="book-main-properties">
+        <p>{bookCategory}</p>
+        <h2>{bookTitle}</h2>
+        <p>Author name</p>
+        <div className="book-options d-flex">
+          <button type="button">Comments</button>
+          <button type="button" onClick={() => onClick(bookId)}>Remove</button>
+          <button type="button">Edit</button>
+        </div>
+      </div>
+    </div>
   );
 };
 
