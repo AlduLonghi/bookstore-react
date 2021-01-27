@@ -5,29 +5,22 @@ import { createBook } from '../redux/actions';
 
 const BookForm = ({ createBook }) => {
   const [book, setBook] = useState({ title: '', category: 'invalidOption' });
-  const [inputValidity, setInputValidity] = useState({
-    titleValidity: false,
-    categoryValidity: false,
-    invalidSubmition: false,
-  });
+  const [invalidSubmition, setInvalidSubmition] = useState(false);
 
-  const handleChange = (e, inputType) => {
-    if (inputType === 'title' && e.target.value.length > 5) {
-      setInputValidity({ ...inputValidity, titleValidity: true });
-      setBook({ ...book, [e.target.name]: e.target.value });
-    } else if (inputType === 'category' && e.target.value !== 'invalidOption') {
-      setInputValidity({ ...inputValidity, categoryValidity: true });
+  const handleChange = e => {
+    if (e.target.value.length > 5 || e.target.value !== 'invalidOption') {
       setBook({ ...book, [e.target.name]: e.target.value });
     }
   };
 
   const handleSubmit = () => {
-    if (inputValidity.titleValidity === true && inputValidity.categoryValidity === true) {
+    if (book.title !== '' && book.category !== 'invalidOption') {
       const newBook = { ...book, id: Math.random() };
       createBook(newBook);
       setBook({ title: '', category: '' });
+      setInvalidSubmition(false);
     } else {
-      setInputValidity({ ...inputValidity, invalidSubmition: true });
+      setInvalidSubmition(true);
     }
   };
 
@@ -39,7 +32,7 @@ const BookForm = ({ createBook }) => {
         <label htmlFor="title">
           Title of your book:
           <input type="text" id="book" name="title" onChange={e => handleChange(e, 'title')} />
-          {inputValidity.titleValidity === false && inputValidity.invalidSubmition === true
+          {invalidSubmition
              && <span>Title should be at least 5 characters long</span>}
         </label>
       </div>
@@ -50,7 +43,7 @@ const BookForm = ({ createBook }) => {
             <option value="invalidOption">Categories:</option>
             {bookCategories.map(categ => <option key={categ} value={categ}>{categ}</option>)}
           </select>
-          {inputValidity.categoryValidity === false && inputValidity.invalidSubmition === true
+          {invalidSubmition
              && <span>Category should not be empty</span>}
         </label>
       </div>
