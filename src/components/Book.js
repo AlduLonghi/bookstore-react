@@ -10,7 +10,7 @@ const Book = props => {
       <div className="book-main-properties">
         <p>{bookCategory}</p>
         <h2>{bookTitle}</h2>
-        <p>Author name</p>
+        <p>Miguel de Cervantes</p>
         <div className="book-options d-flex">
           <button type="button">Comments</button>
           <button type="button" onClick={() => onClick(bookId)}>Remove</button>

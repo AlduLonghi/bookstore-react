@@ -29,26 +29,23 @@ const BookForm = ({ createBook }) => {
 
   return (
     <form id="book-form">
-      <div>
-        <label htmlFor="title">
-          Title of your book:
-          <input type="text" id="book" name="title" onChange={e => handleChange(e, 'title')} />
+      <h3>Add a book</h3>
+      <div className="d-flex input-container">
+        <div className="input-text">
+          <input type="text" id="book" name="title" placeholder="Book title" onChange={e => handleChange(e, 'title')} />
           {invalidSubmition
-             && <span>Title should be at least 5 characters long</span>}
-        </label>
-      </div>
-      <div>
-        <label htmlFor="booksCategory">
-          Choose a category:
+             && <span className="error-span">Title should be at least 5 characters long</span>}
+        </div>
+        <div className="input-select">
           <select name="category" id="category" onChange={e => handleChange(e, 'category')}>
-            <option value="invalidOption">Categories:</option>
+            <option value="invalidOption">Category:</option>
             {bookCategories.map(categ => <option key={categ} value={categ}>{categ}</option>)}
           </select>
           {invalidSubmition
-             && <span>Category should not be empty</span>}
-        </label>
+             && <span className="error-span">Category should not be empty</span>}
+        </div>
+        <button className="add-book-btn" type="button" onClick={handleSubmit}>add book</button>
       </div>
-      <button type="button" onClick={handleSubmit}>Submit</button>
     </form>
   );
 };

@@ -1,12 +1,12 @@
 import '../styles/index.scss';
 import BooksList from '../containers/BooksList';
 import BookForm from '../containers/BookForm';
-import Navbar from './Navbar';
+import Header from './Header';
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Header />
       <main className="d-flex">
         <BooksList />
         <BookForm />

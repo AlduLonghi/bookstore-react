@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
+import '../styles/index.scss';
 
 const CategoryFilter = ({ onChange }) => {
   const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
-    <select name="categoryFilter" id="categoryFilter" onChange={onChange}>
-      <option value="All">All</option>
-      {bookCategories.map(categ => <option key={`filter-${categ}`} value={categ}>{categ}</option>)}
-    </select>
+    <div className="category-filter-cont d-flex">
+      <select name="categoryFilter" id="categoryFilter" className="category-filter" onChange={onChange}>
+        <option value="All">All</option>
+        {bookCategories.map(categ => <option key={`filter-${categ}`} value={categ}>{categ}</option>)}
+      </select>
+    </div>
   );
 };
 
