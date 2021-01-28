@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;700&family=Roboto+Slab:wght@200;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;700;300&family=Roboto+Slab:wght@200;900;300&display=swap');
 
 $blue-color: #0290ff;
 $white-color: #fff;
@@ -12,6 +12,10 @@ $black-color: #121212;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+button {
+  outline: none;
 }
 
 .d-flex {
@@ -35,7 +39,7 @@ body {
 
 main {
   flex-direction: column;
-  width: 75%;
+  width: 67vw;
 }
 
 nav {
@@ -65,13 +69,13 @@ nav {
 }
 
 .nav-content-container {
-  width: 75%;
+  width: 67vw;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav-logo-and-links {
-  width: 35%;
+  width: 40%;
   height: 50%;
   justify-content: space-between;
   align-items: center;
@@ -90,13 +94,14 @@ nav {
 }
 
 .book-description {
+  justify-content: space-between;
   margin-top: 1.3rem;
   background-color: $white-color;
-  justify-content: space-between;
   padding: 2rem 1.5rem;
   font-family: $roboto;
   border: 1px solid #e8e8e8;
   border-radius: 0.3rem;
+  color: $black-color;
 }
 
 .book-main-properties {
@@ -104,14 +109,12 @@ nav {
     font-family: $montserrat;
     font-weight: 800;
     font-size: 0.9rem;
-    color: $black-color;
     opacity: 0.5;
   }
 
   h2 {
     font-weight: 900;
     letter-spacing: -0.5px;
-    color: $black-color;
     font-size: 1.8rem;
     margin-top: 0.6rem;
   }
@@ -139,9 +142,13 @@ nav {
   }
 }
 
+.completion-container {
+  align-items: center;
+}
+
 .graphic-container {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4.2rem;
+  height: 4.2rem;
   position: relative;
 
   div {
@@ -163,6 +170,51 @@ nav {
   transform: rotate(45deg);
 }
 
-.completion-container {
-  align-items: center;
+.percentage-text {
+  font-family: $montserrat;
+  border-right: 2px solid $light-grey;
+  padding-right: 4vw;
+  margin-left: 1rem;
+
+  p:first-child {
+    font-weight: normal;
+    font-size: 2rem;
+  }
+
+  p:nth-child(2) {
+    opacity: 0.5;
+  }
+}
+
+.chapter-container {
+  font-weight: 300;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 4rem;
+
+  p:first-child {
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 0.9rem;
+  }
+
+  p:nth-child(2) {
+    letter-spacing: -0.4px;
+    margin-bottom: 1rem;
+  }
+
+  .chapter-button {
+    border: none;
+    border-radius: 0.2rem;
+    background-color: $blue-color;
+    color: $white-color;
+    text-transform: uppercase;
+    padding: 0.6rem 1.7rem;
+    justify-self: end;
+    justify-self: baseline;
+  }
+}
+
+.progress-container {
+  margin-right: 6rem;
 }

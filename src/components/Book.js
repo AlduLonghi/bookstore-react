@@ -17,17 +17,23 @@ const Book = props => {
           <button type="button">Edit</button>
         </div>
       </div>
-      <div className="completion-container d-flex">
-        <div className="graphic-container">
-          <div className="circle-1" />
-          <div className="circle-2" />
+      <div className="d-flex">
+        <div className="completion-container d-flex">
+          <div className="graphic-container">
+            <div className="circle-1" />
+            <div className="circle-2" />
+          </div>
+          <div className="percentage-text">
+            <p>75%</p>
+            <p>Completed</p>
+          </div>
         </div>
-        <div>
-          <p>75%</p>
-          <p>completed</p>
+        <div className="chapter-container d-flex">
+          <p>current chapter</p>
+          <p>Chapter 17</p>
+          <button type="button" className="chapter-button">update progress</button>
         </div>
       </div>
-      <div />
     </div>
   );
 };
