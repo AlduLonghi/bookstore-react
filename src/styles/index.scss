@@ -8,18 +8,18 @@ $roboto: 'Roboto Slab', serif;
 $light-blue: #4386bf;
 $black-color: #121212;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .d-flex {
   display: flex;
 }
 
 .not-selected-link {
   opacity: 0.5;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -44,24 +44,24 @@ nav {
   background-color: $white-color;
   justify-content: center;
   font-family: $montserrat;
-}
 
-nav h1 {
-  font-size: 2vw;
-  color: $blue-color;
-  font-weight: 800;
+  h1 {
+    font-size: 2vw;
+    color: $blue-color;
+    font-weight: 800;
+  }
+
+  button {
+    background-color: transparent;
+    border: 1px solid $light-grey;
+    border-radius: 50%;
+    padding: 0.8rem 0.9rem;
+  }
 }
 
 .user-svg {
   width: 1.2rem;
   height: 1.2rem;
-}
-
-nav button {
-  background-color: transparent;
-  border: 1px solid $light-grey;
-  border-radius: 50%;
-  padding: 0.8rem 0.9rem;
 }
 
 .nav-content-container {
@@ -75,14 +75,14 @@ nav button {
   height: 50%;
   justify-content: space-between;
   align-items: center;
-}
 
-.nav-logo-and-links p {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 0.7vw;
-  color: $black-color;
-  letter-spacing: 0.1rem;
+  p {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.7vw;
+    color: $black-color;
+    letter-spacing: 0.1rem;
+  }
 }
 
 .books-container {
@@ -92,26 +92,29 @@ nav button {
 .book-description {
   margin-top: 1.3rem;
   background-color: $white-color;
+  justify-content: space-between;
   padding: 2rem 1.5rem;
   font-family: $roboto;
   border: 1px solid #e8e8e8;
   border-radius: 0.3rem;
 }
 
-.book-main-properties p:first-child {
-  font-family: $montserrat;
-  font-weight: 800;
-  font-size: 0.9rem;
-  color: $black-color;
-  opacity: 0.5;
-}
+.book-main-properties {
+  p:first-child {
+    font-family: $montserrat;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: $black-color;
+    opacity: 0.5;
+  }
 
-.book-main-properties h2 {
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  color: $black-color;
-  font-size: 1.8rem;
-  margin-top: 0.6rem;
+  h2 {
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: $black-color;
+    font-size: 1.8rem;
+    margin-top: 0.6rem;
+  }
 }
 
 .book-main-properties p:nth-child(3),
@@ -121,17 +124,45 @@ nav button {
 
 .book-options {
   margin-top: 1.2rem;
-  width: 15%;
+  width: 100%;
   justify-content: space-between;
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 0.9rem;
+  }
+
+  button:not(:last-child) {
+    border-right: 1px solid $light-grey;
+    padding-right: 0.8rem;
+  }
 }
 
-.book-options button {
-  background-color: transparent;
-  border: none;
-  font-size: 0.9rem;
+.graphic-container {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: relative;
+
+  div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
 }
 
-.book-options button:not(:last-child) {
-  border-right: 1px solid $light-grey;
-  padding-right: 0.8rem;
+.circle-1 {
+  border: solid 5px #e8e8e8;
+}
+
+.circle-2 {
+  border: 5px solid $blue-color;
+  border-radius: 50%;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+}
+
+.completion-container {
+  align-items: center;
 }

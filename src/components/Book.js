@@ -6,7 +6,7 @@ const Book = props => {
   } = props;
 
   return (
-    <div className="book-description">
+    <div className="book-description d-flex">
       <div className="book-main-properties">
         <p>{bookCategory}</p>
         <h2>{bookTitle}</h2>
@@ -15,6 +15,16 @@ const Book = props => {
           <button type="button">Comments</button>
           <button type="button" onClick={() => onClick(bookId)}>Remove</button>
           <button type="button">Edit</button>
+        </div>
+      </div>
+      <div className="completion-container d-flex">
+        <div className="graphic-container">
+          <div className="circle-1" />
+          <div className="circle-2" />
+        </div>
+        <div>
+          <p>75%</p>
+          <p>completed</p>
         </div>
       </div>
       <div />
