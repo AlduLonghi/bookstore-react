@@ -4,6 +4,8 @@
 
 > This project consists of building a bookstore website using React.
 
+<img src="./src/assets/screenshot.png" width="600" height="500">
+
 ## Built With
 
 - JavaScript
@@ -49,9 +51,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse curriculum
+- Zeplin
 
 ## 📝 License
 

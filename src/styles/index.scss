@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;700;300&family=Roboto+Slab:wght@200;900;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;700;300&family=Roboto+Slab:wght@100;900;300;500;700&display=swap');
 
 $blue-color: #0290ff;
 $white-color: #fff;
@@ -37,7 +37,7 @@ body {
 
 main {
   flex-direction: column;
-  width: 72vw;
+  width: 80vw;
 }
 
 header {
@@ -67,7 +67,7 @@ header {
 }
 
 .nav-content-container {
-  width: 72vw;
+  width: 80vw;
   justify-content: space-between;
   align-items: center;
 }
@@ -81,7 +81,7 @@ header {
   p {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 0.7vw;
+    font-size: 0.8rem;
     color: $black-color;
     letter-spacing: 0.1rem;
   }
@@ -207,7 +207,9 @@ header {
 
   p:nth-child(2) {
     letter-spacing: -0.4px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 100;
+    font-size: 1.1rem;
   }
 
   .chapter-button {
