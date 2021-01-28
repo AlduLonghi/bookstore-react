@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { changeFilter, removeBook } from '../redux/actions/index';
 import CategoryFilter from '../components/CategoryFilter';
-import '../styles/App.css';
+import '../styles/index.scss';
 
 const BooksList = ({
   books, removeBook, changeFilter, filter,
@@ -19,28 +19,17 @@ const BooksList = ({
   };
 
   return (
-    <div className="table-container">
+    <div className="books-container">
       <CategoryFilter onChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {displayedBooks().map(book => (
-            <Book
-              key={book.id}
-              bookId={book.id}
-              bookTitle={book.title}
-              bookCategory={book.category}
-              onClick={handleRemoveBook}
-            />
-          ))}
-        </tbody>
-      </table>
+      {displayedBooks().map(book => (
+        <Book
+          key={book.id}
+          bookId={book.id}
+          bookTitle={book.title}
+          bookCategory={book.category}
+          onClick={handleRemoveBook}
+        />
+      ))}
     </div>
   );
 };

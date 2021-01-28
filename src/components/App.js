@@ -1,13 +1,17 @@
-import '../styles/App.css';
+import '../styles/index.scss';
 import BooksList from '../containers/BooksList';
 import BookForm from '../containers/BookForm';
+import Header from './Header';
 
 function App() {
   return (
-    <div className="App">
-      <BooksList />
-      <BookForm />
-    </div>
+    <>
+      <Header />
+      <main className="d-flex">
+        <BooksList />
+        <BookForm />
+      </main>
+    </>
   );
 }
 
