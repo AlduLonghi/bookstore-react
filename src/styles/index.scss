@@ -37,7 +37,7 @@ body {
 
 main {
   flex-direction: column;
-  width: 67vw;
+  width: 72vw;
 }
 
 header {
@@ -67,7 +67,7 @@ header {
 }
 
 .nav-content-container {
-  width: 67vw;
+  width: 72vw;
   justify-content: space-between;
   align-items: center;
 }
@@ -95,7 +95,7 @@ header {
   justify-content: space-between;
   margin-top: 1.3rem;
   background-color: $white-color;
-  padding: 2rem 1.5rem;
+  padding: 2rem 2rem;
   font-family: $roboto;
   border: 1px solid #e8e8e8;
   border-radius: 0.3rem;
@@ -304,4 +304,15 @@ input,
   color: red;
   opacity: 0.7;
   font-weight: 700;
+}
+
+@media screen and (min-width: 1400px) {
+  main,
+  .nav-content-container {
+    width: 65vw;
+  }
+
+  .chapter-container {
+    margin-right: 6rem;
+  }
 }
